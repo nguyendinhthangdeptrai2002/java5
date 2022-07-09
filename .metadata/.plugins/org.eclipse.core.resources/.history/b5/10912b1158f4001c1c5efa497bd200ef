@@ -1,0 +1,25 @@
+package com.thang.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.thang.DAO.NhanVien;
+import com.thang.entity.Hocsinh;
+
+import antlr.collections.List;
+
+@Controller
+public class index {
+	@Autowired
+	NhanVien dao;
+	@RequestMapping("index")
+	public String show(Model model) {
+		
+		java.util.List<Hocsinh> hocsinh = dao.findAll();
+		model.addAttribute("hocsinh",hocsinh);
+		return "/template/mpa/form";
+	}
+
+}

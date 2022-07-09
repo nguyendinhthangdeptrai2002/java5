@@ -1,0 +1,65 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the hocsinh database table.
+ * 
+ */
+@Entity
+@Table(name="hocsinh")
+@NamedQuery(name="Hocsinh.findAll", query="SELECT h FROM Hocsinh h")
+public class Hocsinh implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name="Masv")
+	private int masv;
+
+	@Column(name="Chuyennganh")
+	private Object chuyennganh;
+
+	@Column(name="Diem")
+	private double diem;
+
+	@Column(name="Hoten")
+	private Object hoten;
+
+	public Hocsinh() {
+	}
+
+	public int getMasv() {
+		return this.masv;
+	}
+
+	public void setMasv(int masv) {
+		this.masv = masv;
+	}
+
+	public Object getChuyennganh() {
+		return this.chuyennganh;
+	}
+
+	public void setChuyennganh(Object chuyennganh) {
+		this.chuyennganh = chuyennganh;
+	}
+
+	public double getDiem() {
+		return this.diem;
+	}
+
+	public void setDiem(double diem) {
+		this.diem = diem;
+	}
+
+	public Object getHoten() {
+		return this.hoten;
+	}
+
+	public void setHoten(Object hoten) {
+		this.hoten = hoten;
+	}
+
+}

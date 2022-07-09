@@ -1,0 +1,24 @@
+package com.thang.service;
+
+import java.util.Collection;
+
+import com.thang.bean.Item;
+import com.thang.entity.Product;
+
+
+public interface ShoppingCartService {
+	Item add(Integer id);
+ 
+ void remove(Integer id);
+ 
+ Item update(Integer id ,int quantity );
+	
+ void clear();
+ 
+ Collection<Item> getProducts();
+  
+ int getCount();
+ 
+ 
+ double getAmount();
+}

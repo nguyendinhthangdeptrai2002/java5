@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="SOF3021_PS18329_LeTriTam_Lab4/src/main/java"/>
+	<classpathentry kind="src" path="SOF3021_PS18329_LeTriTam_Lab4/src/test/java"/>
+	<classpathentry kind="lib" path="SOF3021_PS18329_LeTriTam_Lab4/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="SOF3021_PS18329_LeTriTam_Lab4/target/classes"/>
+</classpath>

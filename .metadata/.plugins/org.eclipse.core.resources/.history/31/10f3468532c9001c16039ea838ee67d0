@@ -1,0 +1,9 @@
+package test;
+
+public class demo1 {
+ public static void main(String[] args) {
+	
+	 System.err.println("hello anh em");
+	 System.err.println("day la mot bai test ne");
+}
+}

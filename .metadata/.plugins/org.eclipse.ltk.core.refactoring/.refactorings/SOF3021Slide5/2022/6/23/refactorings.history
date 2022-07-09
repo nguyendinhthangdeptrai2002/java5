@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.phunglv.entity&apos; to &apos;assignment/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;SOF3021Slide5&apos;&#x0D;&#x0A;- Destination element: &apos;assignment/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;SOF3021Slide5/src/main/java/com.phunglv.entity&apos;" description="Copy package" destination="=assignment/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.phunglv.entity" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1655036123826" version="1.0"/>
+</session>

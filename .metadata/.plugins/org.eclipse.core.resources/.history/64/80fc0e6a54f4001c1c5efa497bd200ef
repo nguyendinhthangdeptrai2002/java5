@@ -1,0 +1,33 @@
+package com.thang.entity;
+
+import java.io.Serializable;
+
+
+
+/**
+ * The persistent class for the hocsinh database table.
+ * 
+ */
+@Data
+@Entity
+@Table(name="hocsinh")
+@NamedQuery(name="Hocsinh.findAll", query="SELECT h FROM Hocsinh h")
+public class Hocsinh implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="Masv")
+	private int masv;
+
+	@Column(name="Chuyennganh")
+	private String chuyennganh;
+
+	@Column(name="Diem")
+	private double diem;
+
+	@Column(name="Hoten")
+	private String hoten;
+
+	
+}

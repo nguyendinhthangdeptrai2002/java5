@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="SOF3021Slide4/.mvn/wrapper"/>
+	<classpathentry kind="src" path="SOF3021Slide4/src/main/java"/>
+	<classpathentry kind="src" path="SOF3021Slide4/src/test/java"/>
+	<classpathentry kind="output" path="SOF3021Slide4/target/classes"/>
+</classpath>

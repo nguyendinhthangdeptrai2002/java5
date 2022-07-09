@@ -1,0 +1,5 @@
+package com.thang.DAO;
+
+public interface khachhangDAO {
+
+}

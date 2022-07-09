@@ -1,0 +1,76 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the khachhang database table.
+ * 
+ */
+@Entity
+@Table(name="khachhang")
+@NamedQuery(name="Khachhang.findAll", query="SELECT k FROM Khachhang k")
+public class Khachhang implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name="Username")
+	private String username;
+
+	@Column(name="Email")
+	private Object email;
+
+	@Column(name="Gioitinh")
+	private boolean gioitinh;
+
+	@Column(name="Hoten")
+	private Object hoten;
+
+	@Column(name="Password")
+	private Object password;
+
+	public Khachhang() {
+	}
+
+	public String getUsername() {
+		return this.username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public Object getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(Object email) {
+		this.email = email;
+	}
+
+	public boolean getGioitinh() {
+		return this.gioitinh;
+	}
+
+	public void setGioitinh(boolean gioitinh) {
+		this.gioitinh = gioitinh;
+	}
+
+	public Object getHoten() {
+		return this.hoten;
+	}
+
+	public void setHoten(Object hoten) {
+		this.hoten = hoten;
+	}
+
+	public Object getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(Object password) {
+		this.password = password;
+	}
+
+}

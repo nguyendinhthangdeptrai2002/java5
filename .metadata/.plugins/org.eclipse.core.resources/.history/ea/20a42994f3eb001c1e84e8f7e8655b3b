@@ -1,0 +1,131 @@
+package com.thang.entity;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+import lombok.Data;
+
+import java.util.List;
+
+
+/**
+ * The persistent class for the Products database table.
+ * 
+ */
+@Data
+@Entity
+@Table(name="Products")
+@NamedQuery(name="Product.findAll", query="SELECT p FROM Product p")
+public class Product implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name="Id")
+	private int id;
+
+	@Column(name="Available")
+	private boolean available;
+
+	@Column(name="CreateDate")
+	private Object createDate;
+
+	@Column(name="Image")
+	private Object image;
+
+	@Column(name="Name")
+	private Object name;
+
+	@Column(name="Price")
+	private double price;
+
+	//bi-directional many-to-one association to OrderDetail
+	@OneToMany(mappedBy="product")
+	private List<OrderDetail> orderDetails;
+
+	//bi-directional many-to-one association to Category
+	@ManyToOne
+	@JoinColumn(name="CategoryId")
+	private Category category;
+
+	public Product() {
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public boolean getAvailable() {
+		return this.available;
+	}
+
+	public void setAvailable(boolean available) {
+		this.available = available;
+	}
+
+	public Object getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(Object createDate) {
+		this.createDate = createDate;
+	}
+
+	public Object getImage() {
+		return this.image;
+	}
+
+	public void setImage(Object image) {
+		this.image = image;
+	}
+
+	public Object getName() {
+		return this.name;
+	}
+
+	public void setName(Object name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public List<OrderDetail> getOrderDetails() {
+		return this.orderDetails;
+	}
+
+	public void setOrderDetails(List<OrderDetail> orderDetails) {
+		this.orderDetails = orderDetails;
+	}
+
+	public OrderDetail addOrderDetail(OrderDetail orderDetail) {
+		getOrderDetails().add(orderDetail);
+		orderDetail.setProduct(this);
+
+		return orderDetail;
+	}
+
+	public OrderDetail removeOrderDetail(OrderDetail orderDetail) {
+		getOrderDetails().remove(orderDetail);
+		orderDetail.setProduct(null);
+
+		return orderDetail;
+	}
+
+	public Category getCategory() {
+		return this.category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+}

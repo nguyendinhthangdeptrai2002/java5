@@ -1,0 +1,59 @@
+package com.thang.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.thang.DAO.OrderDAO;
+import com.thang.DAO.ProductDAO;
+import com.thang.DAO.ProductDetailDAO;
+import com.thang.entity.Order;
+import com.thang.entity.Product;
+import com.thang.entity.Productsdetail;
+
+@Controller
+public class BuyProduct {
+	
+	@Autowired
+	ProductDetailDAO dao_detail;
+	@Autowired
+	ProductDAO dao_product;
+	@Autowired
+	OrderDAO dao_order;
+	AccountController acc;
+     
+//	theêm sản phẩm vào giỏ hàng
+	 @PostMapping(value="/addtocart",params = ("idsanpham"))
+	 public String addtocart(Model model ,@RequestParam("idsanpham") String id,@RequestParam("size") String size ,@RequestParam("color") String color,
+			 @RequestParam("quantity") String quantity) {
+		 System.out.println("id: "+id);
+		 Productsdetail productsdetail = new Productsdetail();
+		 
+		 Order order = new Order();
+		 order.setAccount()
+		System.out.println(order);
+		 System.out.println(size);
+		 System.out.println(color);
+		 System.out.println(quantity);
+		 
+		 
+//         if(size.length()==0 ) {
+//        	 System.out.println("vui long chon size");
+//         }
+//         else if(color.length()==0 ) {
+//        	 System.out.println("vui long chon color");
+//         }
+        
+	
+	
+		List<Product> product = dao_product.findAll();
+		model.addAttribute("product",product);		
+		return ("/template/shoping-cart");
+	 }
+}

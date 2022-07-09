@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;OrderDAO.java&apos; to &apos;assignment/src/main/java/com.thang.DAO&apos;&#x0D;&#x0A;- Original project: &apos;lab6-java5&apos;&#x0D;&#x0A;- Destination element: &apos;assignment/src/main/java/com.thang.DAO&apos;&#x0D;&#x0A;- Original element: &apos;com.thang.Dao.OrderDAO.java&apos;" description="Copy compilation unit" destination="=assignment/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.thang.DAO" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.thang.Dao{OrderDAO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1654618882989" units="1" version="1.0"/>
+</session>

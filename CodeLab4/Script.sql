@@ -1,0 +1,33 @@
+--<ScriptOptions statementTerminator="GO"/>
+
+ALTER TABLE "dbo"."Accounts" DROP CONSTRAINT "PK__Accounts__536C85E5A016ED9A"
+GO
+
+DROP TABLE "dbo"."Accounts"
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE "dbo"."Accounts" (
+	"Username" null NOT NULL,
+	"Password" null NOT NULL,
+	"Fullname" null NOT NULL,
+	"Email" null NOT NULL,
+	"Photo" null NOT NULL,
+	"Activated" BIT,
+	"Admin" BIT,
+	CONSTRAINT "PK__Accounts__536C85E5A016ED9A" PRIMARY KEY ("Username") WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+
+)
+GO
+
+SET ANSI_PADDING OFF
+GO
+
